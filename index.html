@@ -93,6 +93,61 @@
                 font-family: "Great Vibes", cursive;
                 line-height: 1.2;
             }
+            /* Modal */
+            .modal-backdrop {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.45);
+                display: grid;
+                place-items: center;
+                z-index: 999;
+                backdrop-filter: blur(3px);
+            }
+            .modal {
+                background: #fff0f6;
+                border: 2px solid rgba(255, 0, 102, 0.25);
+                border-radius: 18px;
+                padding: 22px 24px 18px;
+                width: min(90vw, 360px);
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+                text-align: center;
+                font-family: "Great Vibes", cursive;
+                color: #b3124f;
+            }
+            .modal h2 {
+                margin: 0 0 6px;
+                font-size: clamp(1.9rem, 7vw, 2.4rem);
+                line-height: 1.1;
+            }
+            .modal p {
+                margin: 0 0 14px;
+                font-size: 1.05rem;
+                font-family: sans-serif;
+                color: #6b1b36;
+            }
+            .modal-actions {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+            }
+            .modal-actions button {
+                padding: 10px 16px;
+                font-size: 1rem;
+                border-radius: 12px;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            .btn-yes {
+                background: #ff4f8b;
+                color: white;
+                box-shadow: 0 6px 14px rgba(255, 0, 102, 0.3);
+            }
+            .btn-no {
+                background: #ffe5f0;
+                color: #b3124f;
+                border: 2px solid rgba(255, 0, 102, 0.2);
+            }
         </style>
     </head>
     <body>
@@ -128,5 +183,35 @@
             </div>
             <p class="caption">The very beginning :)</p>
         </main>
+
+        <div
+            class="modal-backdrop"
+            id="valentine-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="valentine-title"
+        >
+            <div class="modal">
+                <h2 id="valentine-title">
+                    Just Kidding!!! Will you be my valentines?
+                </h2>
+                <div class="modal-actions">
+                    <button class="btn-yes" id="btn-yes">Yes</button>
+                    <button class="btn-no" id="btn-no">No</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const modal = document.getElementById("valentine-modal");
+            const closeModal = () => modal?.remove();
+            document
+                .getElementById("btn-yes")
+                ?.addEventListener("click", closeModal);
+            document.getElementById("btn-no")?.addEventListener("click", () => {
+                window.location.href =
+                    "https://youtu.be/eg_TQyJbMb8?si=ov6fo_3vxcCm1FM5&t=7";
+            });
+        </script>
     </body>
 </html>
