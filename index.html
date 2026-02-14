@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pink Page</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                color-scheme: light;
+            }
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background: pink;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: sans-serif;
+                color: #333;
+            }
+            h1 {
+                font-family: "Great Vibes", cursive;
+                color: red;
+                font-size: 5rem;
+                letter-spacing: 0.04em;
+                margin: 20px 0 12px;
+                position: relative;
+                text-shadow:
+                    0 0 8px rgba(255, 255, 255, 0.7),
+                    0 0 18px rgba(255, 105, 180, 0.6),
+                    0 0 28px rgba(255, 0, 102, 0.4);
+            }
+            h1::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        circle at 20% 30%,
+                        rgba(255, 255, 255, 0.9) 0 6%,
+                        transparent 8%
+                    ),
+                    radial-gradient(
+                        circle at 70% 40%,
+                        rgba(255, 182, 193, 0.9) 0 5%,
+                        transparent 7%
+                    ),
+                    radial-gradient(
+                        circle at 40% 70%,
+                        rgba(255, 255, 255, 0.8) 0 7%,
+                        transparent 9%
+                    );
+                mix-blend-mode: screen;
+                animation: sparkle 3.6s linear infinite;
+                pointer-events: none;
+            }
+            header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background: pink;
+                padding: 10px 0 6px;
+            }
+            @keyframes sparkle {
+                0% {
+                    transform: translate(0%, 0%) scale(1);
+                    opacity: 0.9;
+                }
+                50% {
+                    transform: translate(3%, -2%) scale(1.05);
+                    opacity: 0.6;
+                }
+                100% {
+                    transform: translate(-2%, 3%) scale(1);
+                    opacity: 0.9;
+                }
+            }
+            main {
+                width: min(960px, 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 18px;
+                padding: 24px 20px 32px;
+                box-sizing: border-box;
+            }
+            .media img {
+                width: min(90vw, 520px);
+                max-height: 220px;
+                height: auto;
+                object-fit: contain;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .caption {
+                width: min(90vw, 520px);
+                margin: 0;
+                padding: 8px 4px 4px;
+                font-size: 1.1rem;
+                color: #5a1a1a;
+                text-align: center;
+                font-family: "Great Vibes", cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Happy Valentines Dayyy!!!!!!</h1>
+        </header>
+        <main>
+            <div class="media">
+                <img src="cat_headphone.jpg" alt="Top image" />
+            </div>
+            <p class="caption">Us fr 😄</p>
+            <div class="media">
+                <img
+                    src="https://i.pinimg.com/736x/7e/86/a8/7e86a8a64c57ffc293db563e3845c43c.jpg"
+                    alt="Top image"
+                />
+            </div>
+            <p class="caption">From bumming around with each other</p>
+            <div class="media">
+                <img
+                    src="https://i.pinimg.com/736x/4d/2e/15/4d2e1524b15c734a6343f42a74a98286.jpg"
+                    alt="Top image"
+                />
+            </div>
+            <p class="caption">To hobby maxxing</p>
+            <div class="media">
+                <img src="IMG_4432.png" alt="Middle image" />
+            </div>
+            <p class="caption">Thank you for always being there for moi</p>
+
+            <div class="media">
+                <img src="IMG_1225.JPG" alt="Bottom image" />
+            </div>
+            <p class="caption">The very beginning :)</p>
+        </main>
+    </body>
+</html>
